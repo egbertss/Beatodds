@@ -95,7 +95,7 @@ See [docs/ROADMAP.md](docs/ROADMAP.md). In short: a machine-learning model teste
 
 ## Use of generative AI
 
-Claude (Anthropic) drafted and debugged the Python code and helped discuss the method and edit the text. The group chose the problem, the data sources, the comparison rules, the 80% threshold and the checks, verified the results against the raw data, and is responsible for the analysis.
+Claude (Anthropic) debugged the Python code and helped discuss the method and edit the text. The group chose the problem, the data sources, the comparison rules, the 80% threshold and the checks, verified the results against the raw data, and is responsible for the analysis.
 
 ## Disclaimer
 
