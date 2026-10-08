@@ -1,0 +1,6 @@
+yfinance
+openpyxl
+scikit-learn
+pandas
+numpy
+requests
