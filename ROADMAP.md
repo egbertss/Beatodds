@@ -4,17 +4,27 @@
 
 - Data pipeline for Polymarket and Kalshi earnings contracts, Fed contracts and Yahoo Finance prices.
 - Excel workbook with every statistic as a visible formula.
-- Main finding: when the crowd is at least 80% sure of a beat, a miss costs about −7.0% against −3.0% otherwise.
+- Main finding: when the crowd is at least 80% sure of a beat, a miss costs about 7% against about 3% otherwise.
 
-## Part 2 (in progress)
+## Part 2 (done, November 2026)
 
-1. **Beat the crowd.** Train a machine-learning model on past reports only (crowd probability and its weekly change, company record, volatility, option prices). Test it walk-forward on later months. Keep it only if its Brier score beats the crowd's.
-2. **Size of the move.** Predict the absolute abnormal return so each report gets a likely range, not only a probability.
-3. **Is the crowd too pessimistic?** In Part 1, buying the "beat" side when the crowd gave 60% or less returned about 10% per contract after costs (279 reports). Test it on new reports only.
-4. **Early warning.** A watch list of reports where the crowd is very sure of a beat, because there a miss has cost the most.
-5. **Oil and crypto.** Kalshi daily WTI contracts and Polymarket monthly and weekly "What will WTI hit?" events, plus Bitcoin and Ethereum on both. Compare the crowd's probability with the actual price (Yahoo: CL=F, BTC-USD, ETH-USD) and with volatility-based benchmarks.
-6. **Complete Kalshi download.** Retries and slower requests so every run picks up the same contracts.
+- The flag became a decision: trim, buy a protective put, or hold, with the put priced against its expected payoff.
+- The crowd compared with tools managers already use: StarMine, analyst revisions and option-implied moves (LSEG).
+- Walk-forward machine-learning models, kept only if they beat the crowd or a simple rule out of sample. The dropped models are shown.
+- Gemini reads contracts across venues and writes client briefs, with a guardrail that checks every number.
+- Live calls saved and hashed before each report, then scored.
 
-## Final submission
+## Part 3 (done, November 2026)
 
-8 to 10 slides and a video of 2 minutes at most.
+- Odds drift and disagreement between the crowd and StarMine or analysts tested as extra signals.
+- Gemini reads only contracts it has not read before, so each run adds the new ones.
+- Business sheet: market size with sources and value per client.
+- Pitch deck and two-minute video.
+
+## Next
+
+1. Score a full earnings season live (Q4 2026 reports, January to February 2027).
+2. Confirm or drop the crowd-and-StarMine signal on new reports.
+3. Scheduled morning brief by e-mail during earnings seasons.
+4. Run on a bank's own approved language model in its own cloud, with its compliance wording in each brief.
+5. Pilot with one bank in Monaco.
